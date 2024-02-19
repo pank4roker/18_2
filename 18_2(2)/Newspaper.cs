@@ -27,7 +27,7 @@ namespace _18_2_2_
         }
         public override void Info()
         {
-            WriteLine($"Name: {Name}\nEdition: {edition}\nPrice list: {costlist}\nCount list: {countlist}\n Cost edition: {Cost()}");
+            WriteLine($"Name: {Name}\nEdition: {edition}\nPrice list: {costlist}\nCount list: {countlist}\nCost edition: {Cost()}");
         }
         public override double Cost()
         {
@@ -35,17 +35,15 @@ namespace _18_2_2_
         }
         public static Newspaper Input()
         {
-            Write("Enter the surname: ");
-            string surname = ReadLine();
             Write("Enter the name: ");
             string name = ReadLine();
-            Write("Enter the date of birth: ");
-            DateTime dateTime = DateTime.Parse(ReadLine());
-            Write("Enter the minimal salary: ");
-            double p = Convert.ToDouble(ReadLine());
-            Write("Enter the sales volume: ");
-            int scope = Convert.ToInt32(ReadLine());
-            return new Manager(surname, name, dateTime, p, scope);
+            Write("Enter the price for 1 sheet: ");
+            double costlist = Convert.ToDouble(ReadLine());
+            Write("Enter number of pages: ");
+            int countlist = Convert.ToInt32(ReadLine());
+            Write("Enter the circulation quantity: ");
+            int edition = Convert.ToInt32(ReadLine());
+            return new Newspaper(name, costlist,countlist, edition);
         }
 
 

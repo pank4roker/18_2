@@ -31,17 +31,13 @@ namespace _18_2_2_
         }
         public static Magazine Input()
         {
-            Write("Enter the surname: ");
-            string surname = ReadLine();
             Write("Enter the name: ");
             string name = ReadLine();
-            Write("Enter the date of birth: ");
-            DateTime dateTime = DateTime.Parse(ReadLine());
-            Write("Enter the minimal salary: ");
-            double p = Convert.ToDouble(ReadLine());
-            Write("Enter the sales volume: ");
-            int scope = Convert.ToInt32(ReadLine());
-            return new Manager(surname, name, dateTime, p, scope);
+            Write("Enter the circulation quantity: ");
+            int edition = Convert.ToInt32(ReadLine());
+            Write("Enter the price: ");
+            double price = Convert.ToDouble(ReadLine());
+            return new Magazine(name,edition,price);
         }
 
 
